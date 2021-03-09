@@ -412,7 +412,84 @@ However, a proper factorial analysis which includes an interaction term allows u
 
 This suggests that biomass production may be limited by different factors in the under-storey and upper canopy of the plants. For example with the addition of fertiliser competition for light may be more intense, or more light limited. Adding light to these plants increases biomass substantially. 
 
-## 6.1 Checklist
+## 6.1 Test yourself
+
+You should complete these and check the solutions below! 
+
+A researcher is investigating the impacts of stream water temperature (∘C), volumetric flow rate (cubic feet per second, cfs), and substrate composition (gravel, sand, or mud) on chlorophyll concentration (μg/L). After thoroughly exploring and thinking really hard about the data, they determine that multiple linear regression *without* an interaction is an appropriate approach to explore relationships between variables.
+
+Performing multiple linear regression in R, they find the following model:
+
+$$chlorophyll = 19.2 + 1.3*(temperature) - 0.04*(flow_rate) - 8.6*(gravel) - 5.1*(sand)$$
+
+<details><summary> **A. What are the predictor and outcome variables, and what type of variable is each?** </summary>
+
+- Dependent variable: chlorophyll concentration (a continuous variable)
+
+- Predictor variable: water temperature (a continuous variable)
+
+- Predictor variable: flow rate (a continuous variable)
+
+- Predictor variable: stream substrate (a categorical variable with three levels: mud, gravel, or sand
+
+</details>
+
+<details><summary> **B. What is the reference level for stream substrate composition?** </summary>
+
+The reference level for stream substrate is mud (the level that does not appear explicitly in the regression model)
+
+</details>
+
+<details><summary> **C. Interpret each of the model coefficients** 
+
+- Write a sentence describing what the 1.3 coefficient for temperature means
+
+- Write a sentence describing what the -0.04 coefficient for flow_rate means
+
+- Write a sentence describing what the -8.6 coefficient for gravel means
+
+- Write a sentence describing what the -5.1 coefficient for sand means
+
+</summary>
+
+- Write a sentence describing what the 1.3 coefficient for temperature means:
+
+**For each 1 ∘C increase in water temperature, we expect chlorophyll concentration to increase by 1.3 μg/L, on average.**
+
+- Write a sentence describing what the -0.04 coefficient for flow_rate means:
+
+**For each 1 cfs increase in flow rate, we expect chlorophyll concentration to decrease by 0.04 μg/L, on average.**
+
+- Write a sentence describing what the -8.6 coefficient for gravel means: 
+
+**If stream conditions are otherwise the same, we expect chlorophyll concentration in a stream with gravel substrate to be 8.6 μg/L less than in a stream with mud substrate, on average.**
+
+- Write a sentence describing what the -5.1 coefficient for sand means: 
+
+**If stream conditions are otherwise the same, we expect chlorophyll concentration in a stream with sand substrate to be 5.1 μg/L less than in a stream with mud substrate, on average.**
+
+</details>
+
+<details><summary> **D. Make chlorophyll concentration predictions for streams with the following conditions:** 
+
+What is the predicted chlorophyll concentration for a stream with a flow rate of 184 cfs, temperature of 18.4 ∘C, with gravel substrate?
+
+What is the predicted chlorophyll concentration for a stream with a flow rate of 386 cfs, temperature of 16.1 ∘C, with mud substrate?
+
+</summary>
+
+What is the predicted chlorophyll concentration for a stream with a flow rate of 184 cfs, temperature of 18.4 ∘C, with gravel substrate?
+
+**chlorophyll = 19.2 + 1.3*(18.4) - 0.04*(184) - 8.6*(1) - 5.1*(0) = 27.2 μg/L**
+
+What is the predicted chlorophyll concentration for a stream with a flow rate of 386 cfs, temperature of 16.1 ∘C, with mud substrate?
+
+**chlorophyll = 19.2 + 1.3*(16.1) - 0.04*(386) - 8.6*(0) - 5.1*(0) = 24.7 μg/L**
+
+</details>
+
+
+## 6.2 Checklist
 
 - Make sure you think about your data *before* you start making models
 
